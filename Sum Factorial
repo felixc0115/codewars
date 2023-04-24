@@ -11,3 +11,15 @@ In this kata you will be given a list of values that you must first find the fac
 For example if you are passed the list [4, 6] the equivalent mathematical expression would be 4! + 6! which would equal 744.
 */
 
+function sumFactorial(arr){
+    let sum = 0
+    for (let i = 0; i < arr.length; i++) {
+        let result = 1
+        for (let count = 1; count <= arr[i]; count++) {
+            result *= count
+        }
+        sum += result
+    }
+    return sum
+}
+
