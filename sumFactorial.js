@@ -12,14 +12,13 @@ For example if you are passed the list [4, 6] the equivalent mathematical expres
 */
 
 function sumFactorial(arr){
-    let sum = 0
-    for (let i = 0; i < arr.length; i++) {
-        let result = 1
-        for (let count = 1; count <= arr[i]; count++) {
-            result *= count
-        }
-        sum += result
+  let totalSum = 0
+  arr.forEach((num) => {
+    let result = 1; 
+    for (let i=1 ; i<=num; i++) {
+      result *= i
     }
-    return sum
+    totalSum += result
+  })
+  return totalSum
 }
-
