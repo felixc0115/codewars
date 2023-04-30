@@ -15,3 +15,9 @@ Return true if the number of days passed from last to today is greater than cycl
 
 
 */
+
+function periodIsLate(last, today, cycleLength) {
+  const differenceInDays = (today.getTime() - last.getTime())/ (1000 * 3600 * 24)
+  
+  return differenceInDays > cycleLength ? true : false
+}
