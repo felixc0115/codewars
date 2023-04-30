@@ -14,3 +14,7 @@ In the second example there are two different groups of 1's: (11)2233(11), hence
 
 
 */
+
+const isConsecutive = (str) => {
+//Let's do it...
+}
