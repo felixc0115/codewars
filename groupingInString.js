@@ -16,5 +16,15 @@ In the second example there are two different groups of 1's: (11)2233(11), hence
 */
 
 const isConsecutive = (str) => {
-//Let's do it...
+  const charSeen = {};
+
+  for (let i = 0; i < str.length; i++) {
+    if (str[i] in charSeen) {
+      if (str[i - 1] !== str[i]) return false;
+    } else {
+      charSeen[str[i]] = true;
+    }
+  }
+  
+  return true;
 }
