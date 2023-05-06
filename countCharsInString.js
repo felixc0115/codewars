@@ -4,3 +4,9 @@ What if the string is empty? Then the result should be empty object literal, {}.
 */
 
 
+function count(string) {
+  return string.split('').reduce((total, curr) => {
+   curr in total ? total[curr] ++ : total[curr] = 1
+    return total
+  },{})
+}
