@@ -22,3 +22,22 @@ write a function called isOddHeavy or is_odd_heavy that accepts an integer array
 
 
 */
+
+function isOddHeavy(n){
+  let evenArray = []
+  let oddArray = []
+  n.forEach((num) => {
+    if(num % 2 === 0) {
+      evenArray.push(num)
+    }
+    else {
+      oddArray.push(num)
+    }
+  })
+  console.log(oddArray)
+  console.log(evenArray)
+  
+  return oddArray.every((odd) => {
+    evenArray.forEach((even) => even)
+  })
+}
