@@ -24,20 +24,14 @@ write a function called isOddHeavy or is_odd_heavy that accepts an integer array
 */
 
 function isOddHeavy(n){
-  let evenArray = []
-  let oddArray = []
-  n.forEach((num) => {
-    if(num % 2 === 0) {
-      evenArray.push(num)
-    }
-    else {
-      oddArray.push(num)
-    }
-  })
-  console.log(oddArray)
-  console.log(evenArray)
+  let odd = []
+  let even = []
+  n.forEach(num => num % 2 === 0 ? even.push(num) : odd.push(num))
+  console.log(odd, even)
+  if (odd.length > 0) {
+   return Math.min(...odd) > Math.max(...even) ? true : false
+  }
   
-  return oddArray.every((odd) => {
-    evenArray.forEach((even) => even)
-  })
+  return false
 }
+
