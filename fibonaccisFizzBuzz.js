@@ -8,3 +8,27 @@ The goal of this kata is two-fold:
 For the sake of this kata, you can assume all input will be a positive integer.
 
 */
+
+var fibsFizzBuzz = function(n) {
+  if(n==1) {
+    return [1]
+  }
+    let fibArray = [1,1]
+    for (let i=2; i<n; i++) {
+      fibArray[i] = fibArray[i-1] + fibArray[i-2]
+    }
+  for(let i =0;i<=fibArray.length; i++) {
+     if(fibArray[i] % 3 === 0 && fibArray[i] % 5 === 0) {
+      fibArray[i] = 'FizzBuzz'
+    }
+    else if (fibArray[i] % 3 === 0) {
+      fibArray[i] = 'Fizz'
+    }
+    else if(fibArray[i] % 5 === 0) {
+      fibArray[i] = "Buzz"
+    }
+  }
+   
+  
+  return fibArray
+}
