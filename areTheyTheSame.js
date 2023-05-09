@@ -32,20 +32,7 @@ The two arrays have the same size (> 0) given as parameter in function comp.
 */
 
 function comp(array1, array2){
-  if(!array1 || !array2) {
-    return false
-  }
-  const squaredArray1 = array1.map(num => num * num).sort((a,b) => a - b) 
-  const sortedArray2 = array2.sort((a,b) => a - b)
-  const boolArray = []
-  for(let i=0;i<array1.length;i++) {
-    if(squaredArray1[i] === sortedArray2[i]) {
-      boolArray.push(true)
-    }
-    else {
-      boolArray.push(false)
-    }
-  }
-  console.log(array1, array2, squaredArray1, sortedArray2, boolArray)
-  return boolArray.every((bool) => bool)
+if(!array1 || !array2) return false 
+const sortedArray2 = array2.sort((a,b)=> a - b)
+return array1.map(num => num * num).sort((a,b) => a - b).every((num,i) => num === sortedArray2[i])
 }
