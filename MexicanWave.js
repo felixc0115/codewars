@@ -10,7 +10,7 @@
 
 
 function wave(str){
-  let newArr = [];
+  let newArray = [];
   for (let i = 0; i < str.length; i++) {
     let copy = str.split('');
     if(copy[i] !== ' ') {
@@ -18,5 +18,5 @@ function wave(str){
     newArr.push(copy.join(''))
     }
   }
-  return newArr
+  return newArray
 }
