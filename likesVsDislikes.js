@@ -17,3 +17,12 @@ If the list is empty, return Nothing.
 
 
 */
+
+function likeOrDislike(buttons) {
+  let status; 
+  for (let i=0;i<buttons.length-1; i++) {
+  (status === buttons[i]) ? status = 'Nothing' : status = buttons[i]
+    console.log(buttons[i],status)
+  }
+  return status;
+}
