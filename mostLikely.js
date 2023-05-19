@@ -8,7 +8,6 @@ For this exercise probability is expressed as two numbers separated by a colon e
 
 
 function mostLikely(prob1,prob2){
-  const num1Arr = prob1.split(':')
-  const num2Arr = prob2.split(':')
-  return (num1Arr[0]/num1Arr[1]) >  (num2Arr[0]/num2Arr[1])  
+  const divide = (a,b) => a / b
+  return divide(...prob1.split(':')) > divide(...prob2.split(':')) 
 }
