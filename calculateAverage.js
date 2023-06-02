@@ -6,7 +6,6 @@ Note: Empty arrays should return 0.
 
 */
 
-function findAverage(array) {
-  return array.length ? array.reduce((total,curr) => total +curr)/array.length : 0
+const findAverage = (array) => array.length ? array.reduce((total,curr) => total +curr)/array.length : 0
   
-}
+
